@@ -109,12 +109,17 @@ main{padding:16px;max-width:1060px;width:100%;margin:0 auto;min-width:0}
 /* Baum */
 .baumbild{position:relative;border-radius:18px;overflow:hidden;background:#0a1f44;max-width:900px;margin:0 auto}
 .baumbild img{display:block;width:100%;height:auto}
-.schild{position:absolute;transform:translate(-50%,-50%);background:#0b1b3dd9;color:#fff;border:2px solid var(--farbe,#9be7c4);border-radius:12px;padding:4px 9px;text-align:center;line-height:1.15;box-shadow:0 4px 14px #0008;white-space:nowrap}
-.schild b{display:block;font-size:11px}.schild small{font-size:9.5px;opacity:.85}
-.schild.geplant{border-style:dashed;opacity:.9}
-.schild.akte{border-color:#ffd98a;background:#3a2408e6}
-.schild:hover,.schild:focus-visible{background:#0b1b3d;outline:2px solid #fff}
-@media(min-width:640px){.schild{padding:7px 14px}.schild b{font-size:14px}.schild small{font-size:11.5px}}
+.schild{position:absolute;transform:translate(-50%,-100%);color:#fff;text-align:center;line-height:1.1;white-space:nowrap;padding:0 0 13px;text-shadow:0 0 3px #000,0 0 6px #000,0 1px 2px #000,0 0 12px #06122e}
+.schild::after{content:"";position:absolute;left:50%;bottom:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--farbe,#ffd98a);border:2px solid #fff;box-shadow:0 0 0 3px #0006,0 0 10px var(--farbe,#ffd98a)}
+.schild b{display:block;font-size:12px;font-weight:800;letter-spacing:.2px}.schild small{font-size:9.5px;font-weight:600}
+.schild.geplant::after{background:transparent;border-style:dashed}
+.schild.akte{--farbe:#ffd98a}.schild.akte b{color:#ffe7ad}
+.schild:hover b,.schild:focus-visible b{text-decoration:underline}
+.schild:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:8px}
+@media(min-width:640px){.schild b{font-size:17px}.schild small{font-size:12px}.schild::after{width:14px;height:14px;margin-left:-7px}}
+.astnav{display:flex;gap:6px;overflow-x:auto;margin:-4px 0 12px;padding-bottom:4px}
+.astnav button{flex:none;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:12.5px;background:var(--paper);white-space:nowrap}
+.astnav button[aria-current=true]{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:600}
 .baumfilm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .baumtext{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);background:#0b1b3dd9;color:#fff;border-radius:99px;padding:4px 12px;font-size:12px;white-space:nowrap;animation:weg .4s 5.5s forwards}
 @keyframes weg{to{opacity:0}}
@@ -171,17 +176,17 @@ const BEREICHE = [
 ];
 const bereich = id => BEREICHE.find(b => b.id === id);
 const WERKZEUGE = [
- {id:'pdf',name:V3?'PDF & Scan':'Workflow PDF Pro',tut:'Scannen, PDF bearbeiten und ausfüllen',arten:['PDF','JPG'],da:true,icon:'stift',farbe:'#e0703a',verb:'bearbeiten'},
+ {id:'pdf',name:V3?'Workflow PDF':'Workflow PDF Pro',tut:'Scannen, PDF bearbeiten und ausfüllen',arten:['PDF','JPG'],da:true,icon:'stift',farbe:'#e0703a',verb:'bearbeiten'},
  {id:'geld',name:V3?'Portemonnaie':'BookLedgerPro',tut:V3?'Bon fotografieren, Eingang, Ausgang, was bleibt übrig':'Belege und Buchhaltung',arten:['BELEG'],da:true,icon:'geld',farbe:'#e3b23c',verb:V3?'ansehen':'buchen'},
- {id:'sort',name:V3?'Sortieren':'Datei-Organizer',tut:'Viele Dateien auf einmal vorsortieren',arten:[],da:true,icon:'sort',farbe:'#4fb0c6',verb:'sortieren'},
- {id:'mail',name:V3?'E-Mail':'Private Brain Pro',tut:'E-Mails mit Anlagen hereinholen',arten:[],da:!V3,icon:'eingang',farbe:'#5fc88f',verb:'holen'},
+ {id:'sort',name:V3?'Datei-Organizer':'Datei-Organizer',tut:'Viele Dateien auf einmal vorsortieren',arten:[],da:true,icon:'sort',farbe:'#4fb0c6',verb:'sortieren'},
+ {id:'mail',name:V3?'Private Brain':'Private Brain Pro',tut:'E-Mails mit Anlagen hereinholen',arten:[],da:true,icon:'eingang',farbe:'#5fc88f',verb:'holen'},
  {id:'text',name:V3?'Notizen & Briefe':'Büro-Modul',tut:'Notizen, Briefe und Texte schreiben',arten:['DOCX'],da:false,icon:'notiz',farbe:'#9a7bd6',verb:'schreiben'}
 ];
 const werkzeug = id => WERKZEUGE.find(w => w.id === id);
 const werkzeugFuer = d => WERKZEUGE.find(w => w.arten.includes(d.art));
 let nr = 100;
 const docs = [
- {id:1,titel:'Nebenkostenabrechnung 2025',art:'PDF',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'12.11.2026',herkunft:V3?'PDF & Scan':'Workflow PDF Pro',text:'Hausverwaltung Beispiel. Abrechnungszeitraum 01.01.–31.12.2025. Nachzahlung 184,20 €. Widerspruch bis 12.12.2026 möglich.'},
+ {id:1,titel:'Nebenkostenabrechnung 2025',art:'PDF',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'12.11.2026',herkunft:V3?'Workflow PDF':'Workflow PDF Pro',text:'Hausverwaltung Beispiel. Abrechnungszeitraum 01.01.–31.12.2025. Nachzahlung 184,20 €. Widerspruch bis 12.12.2026 möglich.'},
  {id:2,titel:'Zählerstände zur Abrechnung',art:'JPG',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'03.01.2026',herkunft:'Foto',text:'Foto der Zähler Strom, Wasser, Heizung am 31.12.2025.'},
  {id:3,titel:'Anfrage zur Belegeinsicht',art:'DOCX',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'14.11.2026',herkunft:V3?'Notizen & Briefe':'Büro-Modul',text:'Brief an die Hausverwaltung: Bitte um Einsicht in die Belege der Nebenkostenabrechnung.'},
  {id:4,titel:'Mietvertrag',art:'PDF',bereich:'wohnen',vorgang:'Mietvertrag',datum:'01.04.2019',herkunft:'Datei',text:'Mietvertrag Wohnung, Beginn 01.04.2019, Kaltmiete und Nebenkostenvorauszahlung.'},
@@ -199,14 +204,19 @@ const fristen = [
  {titel:'Widerspruch Nebenkosten',bis:'12.12.2026',doc:1,tage:25}
 ];
 const eingang = { neu:[
- {id:201,titel:'Brief der Krankenkasse',art:'PDF',vorschlag:'gesund',vorgang:'Krankenkasse',quelle:V3?'Sortieren':'Datei-Organizer',sicher:false,text:'Schreiben der Krankenkasse zum Beitrag ab Januar.'},
- {id:202,titel:'Rechnung Autowerkstatt',art:'PDF',vorschlag:'kauf',vorgang:'Auto',quelle:V3?'PDF & Scan':'Workflow PDF Pro',sicher:false,text:'Rechnung Inspektion, 268,40 €.'}
+ {id:201,titel:'Brief der Krankenkasse',art:'PDF',vorschlag:'gesund',vorgang:'Krankenkasse',quelle:V3?'Datei-Organizer':'Datei-Organizer',sicher:false,text:'Schreiben der Krankenkasse zum Beitrag ab Januar.'},
+ {id:202,titel:'Rechnung Autowerkstatt',art:'PDF',vorschlag:'kauf',vorgang:'Auto',quelle:V3?'Workflow PDF':'Workflow PDF Pro',sicher:false,text:'Rechnung Inspektion, 268,40 €.'}
 ], zurueck:[] };
 const organizer = [
  {titel:'Stromabrechnung 2025',art:'PDF',vorschlag:'wohnen',vorgang:'Strom',sicher:true},
  {titel:'Lohnsteuerbescheinigung 2025',art:'PDF',vorschlag:'arbeit',vorgang:'Gehalt 2025',sicher:true},
  {titel:'Rezept Apotheke',art:'JPG',vorschlag:'gesund',vorgang:'Vorsorge 2026',sicher:true},
  {titel:'Unbekanntes Schreiben',art:'PDF',vorschlag:'ich',vorgang:'Sonstiges',sicher:false}
+];
+const mails = [
+ {von:'Hausverwaltung Beispiel',betreff:'Termin zur Zählerablesung',anlage:'Ablesetermin.pdf',vorschlag:'wohnen',vorgang:'Nebenkosten 2025'},
+ {von:'Krankenkasse Beispiel',betreff:'Ihr Beitrag ab Januar',anlage:'Beitragsbescheid.pdf',vorschlag:'gesund',vorgang:'Krankenkasse'},
+ {von:'Autowerkstatt Beispiel',betreff:'Kostenvoranschlag',anlage:'Kostenvoranschlag.pdf',vorschlag:'kauf',vorgang:'Auto'}
 ];
 const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600},{t:'Wochenmarkt',b:-18.50}], bonNr:0, docId:null };
@@ -285,8 +295,8 @@ function vWerkzeuge(){
 
 /* ---------- Version 3: der Baum (Bilder aus der Discovery-Seite des Datei-Organizers) ---------- */
 const BILD = { baum:'', film:'' };
-const ORT = { sort:[15,34], pdf:[89,11], geld:[12,80], mail:[82,88], text:[68,34] };
-function blaetter(id){ return id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : docs.filter(d => d.bei===id).length; }
+const ORT = { sort:[16,36], pdf:[84,24], geld:[13,84], mail:[80,84], text:[70,40] };
+function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : docs.filter(d => d.bei===id).length; }
 function schild(w){ const [x,y] = ORT[w.id], n = blaetter(w.id);
   return `<button class="schild ${w.da?'':'geplant'}" style="left:${x}%;top:${y}%;--farbe:${w.farbe}" data-a="werkzeug" data-id="${w.id}"><b>${w.name}</b><small>${w.da ? (n ? n+(n===1?' Datei':' Dateien') : 'bereit') : 'geplant'}</small></button>`; }
 function vBaum(){
@@ -294,7 +304,7 @@ function vBaum(){
   s.reisen = [];
   return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Städte – jede Stadt ist ein Programm.</p>
   <div class="abschnitt"><div class="baumbild"><img src="${BILD.baum}" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
-   <button class="schild akte" style="left:37%;top:73%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
+   <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
    ${WERKZEUGE.map(schild).join('')}${film}</div></div>
   <div class="abschnitt zweier">
    <div class="karte"><b>Die Halle in der Mitte = die Akte.</b> Hier liegt alles, hier wird gesucht. Jede Datei bleibt, wo sie einsortiert wurde.</div>
@@ -345,6 +355,9 @@ function fWerkzeug(wid, ids=[]){
   const kopf = fk(esc(w.name), V3 ? `Werkzeug in ${NAME} · eigener Ast` : 'Eigene App · erfundene Beispielansicht');
   let inhalt;
   if (wid === 'geld' && V3) inhalt = portemonnaie();
+  else if (wid === 'mail' && V3) inhalt = `<p class="unter">Holt E-Mails mit Anlagen. Der Helfer schlägt vor, wohin die Anlage gehört. Du schickst sie zur Akte.</p>
+     <div class="liste" style="margin-top:10px">${mails.length ? mails.map((m,i) => `<div class="zeile" style="flex-wrap:wrap"><span class="art PDF">PDF</span><span class="mitte"><strong>${esc(m.betreff)}</strong><small>von ${esc(m.von)} · Anlage: ${esc(m.anlage)}</small></span>
+       <span style="display:flex;gap:6px;flex:1 1 100%;align-items:center"><select class="feld" data-mail="${i}" aria-label="Bereich" style="flex:1">${BEREICHE.map(b => `<option value="${b.id}" ${b.id===m.vorschlag?'selected':''}>${b.name}${b.id===m.vorschlag?' (Vorschlag)':''}</option>`).join('')}</select><button class="knopf gruen" data-a="mail-zur-akte" data-i="${i}">Zur Akte</button></span></div>`).join('') : '<p class="leer">Alle Anlagen sind in der Akte.</p>'}</div>`;
   else if (wid === 'sort') inhalt = `<p class="unter">Du wirfst die Dateien hinein. Die Zuordnung passiert hier im Haus: ${V3?'ein Helfer rät, du berichtigst, er lernt daraus':'der Sortier-Kern rät, du berichtigst'}. In die Akte kommt nur das Ergebnis.</p>
      <div class="schritte"><span class="an">raten</span><span class="an">berichtigen</span><span class="an">lernen</span></div>
      <div class="liste" style="margin-top:10px">${organizer.length ? organizer.map((o,i) => `<div class="zeile"><span class="art ${o.art}">${o.art}</span><span class="mitte"><strong>${esc(o.titel)}</strong><small>→ ${bereich(o.vorschlag).name} / ${esc(o.vorgang)}</small></span>${o.sicher?'<span class="marke2 m-ok">bestätigt</span>':`<select class="feld" data-osort="${i}" aria-label="Bereich" style="max-width:120px;padding:5px">${BEREICHE.map(b => `<option value="${b.id}" ${b.id===o.vorschlag?'selected':''}>${b.name}</option>`).join('')}</select><button class="knopf gruen" style="padding:6px 10px" data-a="osort" data-i="${i}">Stimmt</button>`}</div>`).join('') : '<p class="leer">Alles ist in der Akte.</p>'}</div>
@@ -357,7 +370,8 @@ function fWerkzeug(wid, ids=[]){
      <p class="hinweis">Nur eine Beispielansicht. Hier wird nichts wirklich bearbeitet.</p>`
      : `<p class="leer">Gerade liegt hier nichts. Öffne in der Akte eine Unterlage und tippe auf „In ${esc(w.name)} ${w.verb}“.</p>${wid==='pdf'&&V3?`<button class="knopf voll" data-a="scan">${ic('kamera')} Neu scannen</button>`:''}`;
   }
-  fenster(kopf + `<div id="astinhalt">${inhalt}</div>`, 'ast', w.farbe);
+  const astnav = V3 ? `<div class="astnav" aria-label="Zwischen den Programmen wechseln"><button data-a="geh" data-zu="start">‹ Akte</button><button data-a="geh" data-zu="werkzeuge">Baum</button>${WERKZEUGE.filter(x => x.da).map(x => `<button data-a="werkzeug" data-id="${x.id}" ${x.id===wid?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>` : '';
+  fenster(kopf + astnav + `<div id="astinhalt">${inhalt}</div>`, 'ast', w.farbe);
   zeigen();
 }
 function portemonnaie(){
@@ -381,7 +395,7 @@ function fAblegen(){
    ${V3 ? z('bon-start','kamera','Foto: Bon fürs Portemonnaie','wird abgezogen, der Bon liegt in der Akte') : ''}
    ${z('foto','kamera','Foto: Unterlage','ein Bild direkt in die Akte')}
    ${z('datei','datei','Datei','vom Gerät oder aus einem Ordner')}
-   ${z('viele','sort','Viele Dateien auf einmal',V3?'öffnet das Werkzeug „Sortieren“':'gehen zuerst an den Datei-Organizer')}
+   ${z('viele','sort','Viele Dateien auf einmal',V3?'öffnet das Werkzeug „Datei-Organizer“':'gehen zuerst an den Datei-Organizer')}
   </div>`);
 }
 function neuInEingang(titel, art, vorschlag, vorgang, quelle){
@@ -407,7 +421,7 @@ const A = {
  foto: () => neuInEingang('Foto vom '+new Date().toLocaleDateString('de-DE'),'JPG','ich','Sonstiges','Foto'),
  datei: () => neuInEingang('Schreiben der Versicherung','PDF','kauf','Auto','Datei'),
  viele: () => { zu(); if (V3) fWerkzeug('sort'); else { organizer.filter(o => !o.sicher).forEach(o => eingang.neu.unshift({id:++nr,titel:o.titel,art:o.art,vorschlag:o.vorschlag,vorgang:o.vorgang,quelle:'Datei-Organizer',text:''})); const n = organizer.filter(o => o.sicher); n.forEach(o => docs.push({id:++nr,titel:o.titel,art:o.art,bereich:o.vorschlag,vorgang:o.vorgang,datum:'17.11.2026',herkunft:'Datei-Organizer',fassung:1,bei:null,text:o.titel})); organizer.length = 0; s.ansicht = 'eingang'; zeigen(); toast(`${n.length} bestätigte Dateien sind direkt abgelegt. Nur das Unsichere wartet im Eingang.`); } },
- 'sort-zur-akte': () => { const offen = organizer.filter(o => !o.sicher); if (offen.length) return toast(`Noch ${offen.length} unsicher. Bitte erst „Stimmt“ oder berichtigen.`); const n = organizer.length; organizer.forEach(o => docs.push({id:++nr,titel:o.titel,art:o.art,bereich:o.vorschlag,vorgang:o.vorgang,datum:'17.11.2026',herkunft:'Sortieren',fassung:1,bei:null,text:o.titel})); organizer.length = 0; s.reisen = Array(3).fill('sort'); zu(); s.ansicht = 'werkzeuge'; zeigen(); toast(`${n} Dateien sind in der Akte, jede an ihrem Platz.`); },
+ 'sort-zur-akte': () => { const offen = organizer.filter(o => !o.sicher); if (offen.length) return toast(`Noch ${offen.length} unsicher. Bitte erst „Stimmt“ oder berichtigen.`); const n = organizer.length; organizer.forEach(o => docs.push({id:++nr,titel:o.titel,art:o.art,bereich:o.vorschlag,vorgang:o.vorgang,datum:'17.11.2026',herkunft:'Datei-Organizer',fassung:1,bei:null,text:o.titel})); organizer.length = 0; s.reisen = Array(3).fill('sort'); zu(); s.ansicht = 'werkzeuge'; zeigen(); toast(`${n} Dateien sind in der Akte, jede an ihrem Platz.`); },
  bestaetigen: e => { const i = eingang.neu.findIndex(x => x.id == e.dataset.id), x = eingang.neu[i]; eingang.neu.splice(i,1); docs.push({id:x.id,titel:x.titel,art:x.art,bereich:x.vorschlag,vorgang:x.vorgang,datum:'17.11.2026',herkunft:x.quelle,fassung:1,bei:null,text:x.text||x.titel}); zeigen(); toast(`Abgelegt in ${bereich(x.vorschlag).name} / ${x.vorgang}.`); },
  zettel: e => fZettel(e.dataset.id, e.dataset.docs.split(',')),
  mappe: fMappe,
@@ -416,10 +430,11 @@ const A = {
    ids.forEach(i => { const d = docs.find(x => x.id === i); d.bei = null; d.fassung++; eingang.zurueck.unshift({doc:d.id,titel:d.titel,text:`Fassung ${d.fassung} aus ${w.name} · liegt in ${ort(d)}`}); });
    s.wahl.clear(); s.reisen = ids.map(() => w.id); zu(); s.ansicht = V3 ? 'werkzeuge' : 'eingang'; s.frage = ''; zeigen();
    toast(ids.length === 1 ? `Liegt als Fassung ${docs.find(x => x.id === ids[0]).fassung} am alten Platz. Ohne Rückfrage.` : `${ids.length} Unterlagen liegen als neue Fassung an ihrem Platz.`); },
+ 'mail-zur-akte': e => { const m = mails.splice(+e.dataset.i,1)[0]; docs.push({id:++nr,titel:m.anlage.replace('.pdf',''),art:'PDF',bereich:m.vorschlag,vorgang:m.vorgang,datum:'17.11.2026',herkunft:'Private Brain',fassung:1,bei:null,text:`Anlage aus der E-Mail „${m.betreff}“ von ${m.von}.`}); s.reisen = ['mail']; fWerkzeug('mail'); toast(`Liegt in ${bereich(m.vorschlag).name} / ${m.vorgang}.`); },
  osort: e => { organizer[+e.dataset.i].sicher = true; fWerkzeug('sort'); toast('Gemerkt. Der Helfer lernt aus deiner Berichtigung.'); },
  bon: () => { const [t,b] = bons[geld.bonNr++ % bons.length]; geld.posten.push({t,b,bon:true}); docs.push({id:++nr,titel:'Bon '+t,art:'BELEG',bereich:'geld',vorgang:'Ausgaben 2026',datum:'17.11.2026',herkunft:'Portemonnaie',fassung:1,bei:null,text:`Kassenbon ${t}, ${euro(-b)}.`}); geldInAkte(); $('astinhalt').innerHTML = portemonnaie(); zeigen(); toast(`${euro(-b)} abgezogen. Der Bon liegt in der Akte.`); },
  'bon-start': () => { zu(); fWerkzeug('geld'); A.bon(); },
- scan: () => { zu(); neuInEingang('Neuer Scan','PDF','ich','Sonstiges','PDF & Scan'); },
+ scan: () => { zu(); neuInEingang('Neuer Scan','PDF','ich','Sonstiges','Workflow PDF'); },
  kopie: () => toast('Eine Kopie liegt in deinen Downloads (Beispiel). Das Original bleibt in der Akte.'),
  teilen: () => toast('Hier öffnet sich das Teilen-Fenster des Geräts (Beispiel).'),
  fehlt: () => toast('Hier ginge es zum Download des Moduls (Beispiel).')
@@ -429,6 +444,7 @@ document.addEventListener('keydown', ev => { if (ev.key === 'Escape') zu(); if (
 document.addEventListener('change', ev => {
   const t = ev.target;
   if (t.dataset.wahl) { const i = +t.dataset.wahl; t.checked ? s.wahl.add(i) : s.wahl.delete(i); zeigen(); }
+  if (t.dataset.mail) mails[+t.dataset.mail].vorschlag = t.value;
   if (t.dataset.osort) organizer[+t.dataset.osort].vorschlag = t.value;
   if (t.dataset.vorschlag) eingang.neu.find(x => x.id == t.dataset.vorschlag).vorschlag = t.value;
 });
