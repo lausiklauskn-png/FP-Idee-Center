@@ -38,16 +38,32 @@ Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Ve
    Am Handy darf die Leiste nicht voll werden (Klaus: bei der Familienakte „überfüllt“) – Vorschlag unten, Punkt 8.
 4. **Logo:** das Zeichen des Ideen-Centers (`assets/fp-ideen-center-logo.png`, ohne Schrift) für Kopf links, Icon,
    Favicon und blass im Hintergrund.
-5. Ideen-Center nachziehen: `ideen.json`, `version.json`, `app.js`, `sw.js` (SHELL), Parameter in `index.html`.
+5. **Kalender-Knopf** (Klaus 17.11.). Öffnet Termine und Fristen. Eine Notiz oder Unterlage kann von dort oder über
+   „Bearbeiten mit“ einen Termin bekommen.
+6. **Notizen, ganz normal** (Klaus 17.11.). Notiz schreiben oder sprechen, Klaus ordnet sie **von Hand** der Akte zu
+   (er schreibt dazu, was es ist). Kein Helfer nötig.
+7. **„Bearbeiten mit“** an allem, was in der Akte liegt oder gerade hereinkommt (Unterlage, Foto, Notiz):
+   Auswahl der Stadt, die weiterarbeitet (Familienbüro, Workflow PDF, Portemonnaie, Datei-Organizer, Kalender).
+   Die Sache gilt als in der Akte angekommen; bearbeitet wird eine Kopie in der Stadt.
+8. **Leiste oben als Werkzeugleiste** (Klaus 17.11.): die Werkzeuge als Knöpfe, dazu die Spezialknöpfe, die zu
+   einem Modul gehören und es gleich an der richtigen Stelle öffnen:
+   - „Bon fotografieren“ → Portemonnaie
+   - „PDF scannen“ (Foto zu PDF) → Workflow PDF im Familienbüro
+   - „Dateien hineingeben“ (ganze Dateien oder Ordner) → Datei-Organizer
+   - „Notiz“ → Notiz in der Akte
+   - „Kalender“ → Kalender
+   Der grüne Knopf „Ablegen“ aus Version 3 geht darin auf oder bleibt als Sammelknopf – in der Vorschau zeigen
+   und Klaus entscheiden lassen.
+9. Ideen-Center nachziehen: `ideen.json`, `version.json`, `app.js`, `sw.js` (SHELL), Parameter in `index.html`.
 
 ## Geprüft: Was noch fehlt oder zu entscheiden ist
 
 Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Version 3 nicht oder nur am Rand vor:
 
-1. **Fristen und Erinnerung.** Version 3 zeigt nur zwei Fristen auf der Startseite. Glocke und Kalender der
-   Familienakte fehlen. Vorschlag: Fristenliste bleibt in der Akte, Erinnerung über den Gerätekalender.
-2. **Notizen.** Mit dem Familienbüro fällt die Stadt „Notizen & Briefe“ weg. Briefe gehen ins Familienbüro; wohin die
-   schnelle Notiz (Text, Sprache, Foto)? Vorschlag: ein Punkt unter „Ablegen“, Ablage direkt in der Akte.
+1. **Kalender: entschieden, kommt hinein** (Auftrag Punkt 5). Offen bleibt nur die Erinnerung (Glocke der
+   Familienakte oder Gerätekalender).
+2. **Notizen: entschieden, kommen hinein** (Auftrag Punkt 6), von Hand zugeordnet. Ob der Kalender eine eigene Stadt
+   im Baum bekommt oder nur ein Knopf ist, in der Vorschau zeigen.
 3. **Sicherung und Tresor.** Nur als Schild im Kopf angedeutet. Bei einer App: ein Speicherort, eine Sicherung.
 4. **E-Mail (Private Brain).** Ist als Stadt gebaut. Bleibt sie?
 5. **Pseudonymisieren und „An KI“** (PseudoDoc, Pseudo-Fenster der Familienakte) kommen nicht vor. Eigene Stadt,
@@ -57,8 +73,10 @@ Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Versio
 7. **Größe.** Das Familienbüro ist groß: im Repo liegen unter `public/` rund 450 MB (Büro-Kern, davon rund 100 MB
    ostasiatische Schriften). Zusammen mit Discovery wird eine App deutlich größer als die geschätzten 100 MB.
    Vorschlag: Die Stadt Familienbüro wird beim ersten Öffnen nachgeladen statt im Paket mitgeliefert.
-8. **Leiste am Handy.** Mit Drucken, Landkarte, Farbpalette, Sicherung und Hilfe sind es fünf Knöpfe.
-   Vorschlag: am Handy Farbpalette und Hilfe sichtbar, der Rest hinter „⋯“.
+8. **Leiste am Handy.** Werkzeug- und Spezialknöpfe (Auftrag Punkt 8) plus Drucken, Landkarte, Farbpalette,
+   Sicherung und Hilfe sind zu viele für eine Zeile. Vorschlag: sichtbar sind die Knöpfe, mit denen etwas
+   hereinkommt (Bon, Scan, Dateien, Notiz, Kalender), zum Wischen; Drucken, Landkarte, Farbpalette, Sicherung und
+   Hilfe hinter „⋯“. Am PC ist Platz für alle.
 9. **Lizenz des Familienbüros (AGPL-3.0).** Laut dessen CLAUDE.md muss der Quelltext offen bleiben und der
    Herkunftshinweis in der App stehen. Wird das Familienbüro Teil einer App, gilt das voraussichtlich für die ganze
    App. Vor dem echten Bau klären; für die Vorschau ohne Bedeutung.
@@ -88,9 +106,11 @@ Baue Version 4 „Private Act“ als anklickbare Vorschau auf der Grundlage von 
 (Ordner entwuerfe/familienakte/version-4/, Version 3 bleibt unverändert):
 1. Familienbüro als Stadt statt „Workflow PDF“ und „Notizen & Briefe“; die PDF-Kachel darin heißt „Workflow PDF“.
 2. Portemonnaie mit Knopf „An BookLedgerPro geben“ und Weg nach außen im Baum.
-3. Leiste oben: Drucken, Landkarte, Farbpalette; Fassung links beim Namen; am Handy nicht überfüllt.
+3. Leiste oben als Werkzeugleiste: Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF), Dateien hineingeben
+   (Datei-Organizer), Notiz, Kalender; dazu Drucken, Landkarte, Farbpalette. Fassung links beim Namen; am Handy nicht überfüllt.
 4. Logo des Ideen-Centers für Kopf, Icon, Favicon und Hintergrund.
+5. Notizen von Hand zuordnen; „Bearbeiten mit“ an jeder Unterlage, jedem Foto und jeder Notiz.
 Frage mich vorher zu den Punkten 1–11 unter „Was noch fehlt oder zu entscheiden ist“, soweit sie Version 4 betreffen
-(Notizen, E-Mail, Pseudonymisieren, Leiste am Handy, Logo-Farbe). Danach Ideen-Center nachziehen,
+(E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“, Logo-Farbe). Danach Ideen-Center nachziehen,
 im Test-Browser in Handy- und PC-Breite prüfen, Entwurfs-PR anlegen und mir die Datei zeigen.
 ```
