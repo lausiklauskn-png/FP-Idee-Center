@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '1.0.1';
+const VERSION = '1.1.0';
 const PREFIX = 'fp-ideen-center-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
@@ -10,7 +10,9 @@ const SHELL = [
   'favicon.ico', 'icons/favicon-16.png', 'icons/favicon-32.png', 'icons/favicon-48.png',
   'vendor/bootstrap.min.css', 'vendor/bootstrap.bundle.min.js',
   'entwuerfe/familienakte/version-1/familienakte-entwurf-v1.html',
-  'entwuerfe/familienakte/version-1/familienakte-ideenblatt-v1.html'
+  'entwuerfe/familienakte/version-1/familienakte-ideenblatt-v1.html',
+  'entwuerfe/familienakte/version-2/meine-akte-entwurf-v2.html',
+  'entwuerfe/familienakte/version-3/private-act-entwurf-v3.html'
 ].map(path => new URL(path, ROOT).href);
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL.map(url => new Request(url, {cache:'reload'})))));

@@ -23,6 +23,36 @@
             "Ansichten für PWA, Android und Windows",
             "Eigene Ideen einsprechen, sammeln und als Prompt mitnehmen"
           ]
+        },
+        {
+          "version": 2,
+          "title": "Meine Akte · Entwurf Version 2",
+          "date": "2026-11-17",
+          "summary": "Akte als Regal · Module außerhalb · Laufzettel",
+          "url": "entwuerfe/familienakte/version-2/meine-akte-entwurf-v2.html",
+          "contents": [
+            "Anklickbare App statt Präsentation: Start, Akten, Eingang, Module und ein Knopf „Ablegen“",
+            "Versionsnummer links unter dem Namen, Navigation am Handy unten",
+            "Eine Suche mit Sammelmappe, Fristen auf der Startseite, sechs Bereiche überall gleich",
+            "Übergabe an ein Modul mit Laufzettel: herausgeben, arbeiten, als neue Fassung zurück",
+            "Eingang trennt „Neu“ (prüfen) und „Zurück aus einem Modul“ (schon abgelegt)",
+            "Seite „Module“ zeigt, welche Apps da sind und welche fehlen"
+          ]
+        },
+        {
+          "version": 3,
+          "title": "Private Act · Entwurf Version 3",
+          "date": "2026-11-17",
+          "summary": "Eine App · Baum · Werkzeuge als Städte",
+          "url": "entwuerfe/familienakte/version-3/private-act-entwurf-v3.html",
+          "contents": [
+            "Eine App: der Stamm ist die Akte, an den Ästen sitzen die Werkzeuge als Städte",
+            "Werkzeuge öffnen sich in derselben App, „Zur Akte“ ohne Umweg",
+            "Portemonnaie: Bon fotografieren, Eingang, Ausgang, was bleibt übrig; Kopie in der Akte",
+            "Sortieren im Werkzeug: der Helfer rät, du berichtigst, er lernt",
+            "PDF & Scan: Kopie bearbeiten, Ergebnis als neue Fassung am alten Platz",
+            "Baumbild zum Antippen mit wandernden Dateien"
+          ]
         }
       ]
     }
