@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-17",
+  "projects": [
+    {
+      "id": "familienakte",
+      "title": "Familienakte",
+      "mark": "FA",
+      "description": "Vertraut bleiben. Übersichtlicher werden.",
+      "ideaUrl": "entwuerfe/familienakte/version-1/familienakte-ideenblatt-v1.html",
+      "versions": [
+        {
+          "version": 1,
+          "title": "Familienakteentwurf Version 1",
+          "date": "2026-11-17",
+          "summary": "Übersicht · Suche · Ablage · Module",
+          "url": "entwuerfe/familienakte/version-1/familienakte-entwurf-v1.html",
+          "contents": [
+            "Übersicht mit vertrauten Aktenbereichen und anklickbaren Unterordnern",
+            "Suche nach Vorgängen mit Dokumentvorschau und Sammelmappe",
+            "Ablage und Beispielrücklauf aus einem Modul",
+            "Zusammenspiel von Familienakte, Büro, PDF und Buchhaltung",
+            "Ansichten für PWA, Android und Windows",
+            "Eigene Ideen einsprechen, sammeln und als Prompt mitnehmen"
+          ]
+        }
+      ]
+    }
+  ]
+}
