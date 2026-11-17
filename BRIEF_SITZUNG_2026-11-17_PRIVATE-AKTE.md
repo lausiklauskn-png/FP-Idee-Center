@@ -83,7 +83,13 @@ Version 3 (`entwuerfe/familienakte/version-3/private-act-entwurf-v3.html` im Ide
    - „Kalender“ → Kalender
    Der grüne Knopf „Ablegen“ aus Version 3 geht darin auf oder bleibt als Sammelknopf – in der Vorschau zeigen
    und Klaus entscheiden lassen.
-9. Ideen-Center: in `ideen.json` einen Eintrag mit Verweis auf die neue Adresse; App-Version dort erhöhen.
+9. **Design (Klaus 17.11.):** so modern wie die Familienakte, dazu die **Wasserfarben und die Knöpfe des Familienbüros**
+   („dieselben witzigen Farben“). Quellen im Repo `Familienbuero-Pro`: Startseite `familienbuero/start.html`
+   (heller Milchglas-Kopf, Kacheln mit Verlauf und Lichtschein, Schreiben blau, Tabellen grün, Folien koralle, PDF rot),
+   Farbwahl `lib/onlyoffice/farbpalette.ts` (Wie die Kachel · Wasserblau · Wassergrün · Helles Gelb · Koralle · Kräftig,
+   je Programm gemerkt, runder Farbknopf rechts im Kopf). Der Knopf „Farbpalette“ in der Leiste ist genau diese Wahl.
+   Jede Stadt bekommt ihre eigene Wasserfarbe; „Kräftig“ sind die dunklen Familienakte-Farben (Dunkelblau, Türkis).
+10. Ideen-Center: in `ideen.json` einen Eintrag mit Verweis auf die neue Adresse; App-Version dort erhöhen.
 
 ## Geprüft: Was noch fehlt oder zu entscheiden ist
 
@@ -140,7 +146,8 @@ Fassung der „Privaten Akte“ auf der Grundlage von Version 3 aus dem Ideen-Ce
    (Datei-Organizer), Notiz, Kalender; dazu Drucken, Landkarte, Farbpalette. Fassung links beim Namen; am Handy nicht überfüllt.
 4. Logos aus entwuerfe/logo/ (Basic auf Weiß, Pro mit buntem Rand) für Kopf, Icon, Favicon und Hintergrund.
 5. Notizen von Hand zuordnen; „Bearbeiten mit“ an jeder Unterlage, jedem Foto und jeder Notiz.
-6. Von Anfang an: rechtliches.html (Impressum, Datenschutz, Haftungsausschluss, Lizenz & Copyright) aus
+6. Design: modern wie die Familienakte, Wasserfarben und Knöpfe wie im Familienbüro, Farbpalette wie dort.
+7. Von Anfang an: rechtliches.html (Impressum, Datenschutz, Haftungsausschluss, Lizenz & Copyright) aus
    entwuerfe/private-akte/, verlinkt im Fuß und in der Hilfe, dazu die Datei LICENSE.
 Frage mich vorher zu den offenen Punkten unter „Was noch fehlt oder zu entscheiden ist“, soweit sie diese Fassung
 betreffen (E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“, Lizenz). Prüfe im Test-Browser in Handy- und
