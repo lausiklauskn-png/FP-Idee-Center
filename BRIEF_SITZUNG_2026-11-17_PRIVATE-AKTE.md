@@ -1,4 +1,8 @@
-# Brief für die nächste Sitzung – Private Act (17.11.2026)
+# Brief für die nächste Sitzung – Private Akte (17.11.2026)
+
+**Name (Klaus 17.11.): die App heißt „Private Akte“** (zwei Wörter). „Private Act“ war der Arbeitsname von Version 3
+und bleibt nur dort stehen; ab Version 4 überall „Private Akte“, Kürzel im Kopf „PA“. Grund: „Act“ heißt im Englischen
+nicht Akte, „private act“ ist ein Rechtsbegriff, und der Name lag zu nah an „Private Brain Pro“.
 
 ## Stand
 
@@ -23,7 +27,7 @@
 6. **Die Kopie liegt immer in der Akte** (Beispiel Portemonnaie: Bon und Monatsübersicht unter „Geld & Belege“).
 7. **Ein neuer Ast = ein neues Programm.** Es ändert nichts an der Halle und nichts an den anderen Städten.
 
-## Auftrag für die nächste Sitzung: Version 4 als Vorschau
+## Auftrag für die nächste Sitzung: Version 4 „Private Akte“ als Vorschau
 
 Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Version 3 nicht anfassen.
 
@@ -41,8 +45,8 @@ Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Ve
    einen deutlichen Farbrand, der nach innen weiß wird** – entweder im Verlauf der Logofarben oder einfarbig blau –,
    damit Basic und Pro nicht verwechselt werden. **Klaus 17.11.: der bunte Verlauf; das Zeichen soll in allen
    Fassungen groß sein; bei runden Knöpfen darf der Rand nicht abgeschnitten aussehen.** Fertige Dateien unter `entwuerfe/logo/`:
-   `private-act-basic.png` und `private-act-basic-rund.png`; `private-act-pro-verlauf.png` (eckig),
-   `private-act-pro-rund.png` und `private-act-pro-vollflaeche.png` (Farbe kreisförmig bis in die Ecken; als Icon für
+   `private-akte-basic.png` und `private-akte-basic-rund.png`; `private-akte-pro-verlauf.png` (eckig),
+   `private-akte-pro-rund.png` und `private-akte-pro-vollflaeche.png` (Farbe kreisförmig bis in die Ecken; als Icon für
    Android und PWA „maskable“ nehmen, das Gerät schneidet rund oder eckig-rund zu). Übersicht `vergleich-alle.png`.
 5. **Kalender-Knopf** (Klaus 17.11.). Öffnet Termine und Fristen. Eine Notiz oder Unterlage kann von dort oder über
    „Bearbeiten mit“ einen Termin bekommen.
@@ -88,7 +92,8 @@ Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Versio
    App. Vor dem echten Bau klären; für die Vorschau ohne Bedeutung.
 10. **Logo.** Basic und Pro sind über den Rand unterschieden, Pro mit buntem Verlauf (Auftrag Punkt 4).
     Das Ideen-Center trägt dasselbe Zeichen wie die Basic-Variante – auf dem Startbildschirm sehen beide gleich aus.
-11. **Name und Repo.** „Private Act“ steht für Version 3; das neue Repo und sein Name sind noch nicht angelegt.
+11. **Repo.** Der Name steht („Private Akte“); das neue Repo ist noch nicht angelegt. Ob der Name als Marke frei ist,
+    ist nicht geprüft (DPMA, EUIPO) – vor einer Veröffentlichung im Store nachsehen.
     Basic und Pro gibt es (siehe Logo); welche Teile nur Pro hat, ist nicht entschieden.
 12. **Echter Bau.** Die Vorschauen haben keinen Kern. Der liegt in `Meine-Familienakte` (Sortier-Kern, Tresor,
     Eingang, Suche, Sicherung). Welche Teile übernommen werden, ist ein eigener Plan nach Version 4.
@@ -107,8 +112,8 @@ Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Versio
 ## Startauftrag
 
 ```
-Lies im Repo FP-Idee-Center zuerst BRIEF_SITZUNG_2026-11-17_PRIVATE-ACT.md.
-Baue Version 4 „Private Act“ als anklickbare Vorschau auf der Grundlage von Version 3
+Lies im Repo FP-Idee-Center zuerst BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md.
+Baue Version 4 „Private Akte“ als anklickbare Vorschau auf der Grundlage von Version 3
 (Ordner entwuerfe/familienakte/version-4/, Version 3 bleibt unverändert):
 1. Familienbüro als Stadt statt „Workflow PDF“ und „Notizen & Briefe“; die PDF-Kachel darin heißt „Workflow PDF“.
 2. Portemonnaie mit Knopf „An BookLedgerPro geben“ und Weg nach außen im Baum.
