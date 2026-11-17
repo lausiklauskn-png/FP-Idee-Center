@@ -53,6 +53,21 @@
             "Workflow PDF: Kopie bearbeiten, Ergebnis als neue Fassung am alten Platz",
             "Baumbild aus der Discovery-Seite mit antippbaren Schildern; kurzer Film, wenn Dateien zur Akte gehen"
           ]
+        },
+        {
+          "version": 4,
+          "title": "Private Akte · Version 4 (eigenes Repo)",
+          "date": "2026-11-17",
+          "summary": "Verweis · wird im Repo Private-Akte gebaut",
+          "url": "entwuerfe/familienakte/version-4/private-akte-verweis-v4.html",
+          "contents": [
+            "Die Private Akte hat ein eigenes Repo und die Adresse https://lausiklauskn-png.github.io/Private-Akte/",
+            "Familienbüro als Stadt: Schreiben, Tabellen, Folien und Workflow PDF",
+            "Portemonnaie mit Weg nach außen zu BookLedgerPro",
+            "Werkzeugleiste: Bon fotografieren, PDF scannen, Dateien hineingeben, Notiz, Kalender",
+            "„Bearbeiten mit“ an jeder Unterlage, auch Pseudonymisieren; Notizen von Hand zuordnen",
+            "Wasserfarben und Knöpfe wie im Familienbüro, Farbpalette je Programm, Rechtstexte von Anfang an"
+          ]
         }
       ]
     }
