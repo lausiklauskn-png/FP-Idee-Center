@@ -39,12 +39,11 @@ Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Ve
 4. **Logo:** das Zeichen des Ideen-Centers (`assets/fp-ideen-center-logo.png`, ohne Schrift) für Kopf links, Icon,
    Favicon und blass im Hintergrund. **Klaus 17.11.: so, auf Weiß, ist es die Basic-Variante. Die Pro-Variante bekommt
    einen deutlichen Farbrand, der nach innen weiß wird** – entweder im Verlauf der Logofarben oder einfarbig blau –,
-   damit Basic und Pro nicht verwechselt werden. Drei Entwürfe liegen unter `entwuerfe/logo/`
-   (`private-act-basic.png`, `private-act-pro-verlauf.png`, `private-act-pro-blau.png`, Übersicht `vergleich.png`).
-   **Klaus 17.11.: der bunte Verlauf.** Für runde Knöpfe darf der Rand nicht abgeschnitten aussehen: dafür
-   `private-act-pro-vollflaeche.png` (Farbe kreisförmig bis in die Ecken; als Icon für Android und PWA „maskable“ nehmen,
-   das Gerät schneidet rund oder eckig-rund zu), fertig rund `private-act-pro-rund.png` und `private-act-basic-rund.png`,
-   Übersicht `vergleich-rund.png`.
+   damit Basic und Pro nicht verwechselt werden. **Klaus 17.11.: der bunte Verlauf; das Zeichen soll in allen
+   Fassungen groß sein; bei runden Knöpfen darf der Rand nicht abgeschnitten aussehen.** Fertige Dateien unter `entwuerfe/logo/`:
+   `private-act-basic.png` und `private-act-basic-rund.png`; `private-act-pro-verlauf.png` (eckig),
+   `private-act-pro-rund.png` und `private-act-pro-vollflaeche.png` (Farbe kreisförmig bis in die Ecken; als Icon für
+   Android und PWA „maskable“ nehmen, das Gerät schneidet rund oder eckig-rund zu). Übersicht `vergleich-alle.png`.
 5. **Kalender-Knopf** (Klaus 17.11.). Öffnet Termine und Fristen. Eine Notiz oder Unterlage kann von dort oder über
    „Bearbeiten mit“ einen Termin bekommen.
 6. **Notizen, ganz normal** (Klaus 17.11.). Notiz schreiben oder sprechen, Klaus ordnet sie **von Hand** der Akte zu
