@@ -40,8 +40,11 @@ Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Ve
    Favicon und blass im Hintergrund. **Klaus 17.11.: so, auf Weiß, ist es die Basic-Variante. Die Pro-Variante bekommt
    einen deutlichen Farbrand, der nach innen weiß wird** – entweder im Verlauf der Logofarben oder einfarbig blau –,
    damit Basic und Pro nicht verwechselt werden. Drei Entwürfe liegen unter `entwuerfe/logo/`
-   (`private-act-basic.png`, `private-act-pro-verlauf.png`, `private-act-pro-blau.png`, Übersicht `vergleich.png`);
-   Klaus hat zwischen Verlauf und Blau noch nicht gewählt.
+   (`private-act-basic.png`, `private-act-pro-verlauf.png`, `private-act-pro-blau.png`, Übersicht `vergleich.png`).
+   **Klaus 17.11.: der bunte Verlauf.** Für runde Knöpfe darf der Rand nicht abgeschnitten aussehen: dafür
+   `private-act-pro-vollflaeche.png` (Farbe kreisförmig bis in die Ecken; als Icon für Android und PWA „maskable“ nehmen,
+   das Gerät schneidet rund oder eckig-rund zu), fertig rund `private-act-pro-rund.png` und `private-act-basic-rund.png`,
+   Übersicht `vergleich-rund.png`.
 5. **Kalender-Knopf** (Klaus 17.11.). Öffnet Termine und Fristen. Eine Notiz oder Unterlage kann von dort oder über
    „Bearbeiten mit“ einen Termin bekommen.
 6. **Notizen, ganz normal** (Klaus 17.11.). Notiz schreiben oder sprechen, Klaus ordnet sie **von Hand** der Akte zu
@@ -84,7 +87,7 @@ Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Versio
 9. **Lizenz des Familienbüros (AGPL-3.0).** Laut dessen CLAUDE.md muss der Quelltext offen bleiben und der
    Herkunftshinweis in der App stehen. Wird das Familienbüro Teil einer App, gilt das voraussichtlich für die ganze
    App. Vor dem echten Bau klären; für die Vorschau ohne Bedeutung.
-10. **Logo.** Basic und Pro sind über den Rand unterschieden (Auftrag Punkt 4); offen ist die Wahl Verlauf oder Blau.
+10. **Logo.** Basic und Pro sind über den Rand unterschieden, Pro mit buntem Verlauf (Auftrag Punkt 4).
     Das Ideen-Center trägt dasselbe Zeichen wie die Basic-Variante – auf dem Startbildschirm sehen beide gleich aus.
 11. **Name und Repo.** „Private Act“ steht für Version 3; das neue Repo und sein Name sind noch nicht angelegt.
     Basic und Pro gibt es (siehe Logo); welche Teile nur Pro hat, ist nicht entschieden.
@@ -115,6 +118,6 @@ Baue Version 4 „Private Act“ als anklickbare Vorschau auf der Grundlage von 
 4. Logo des Ideen-Centers für Kopf, Icon, Favicon und Hintergrund.
 5. Notizen von Hand zuordnen; „Bearbeiten mit“ an jeder Unterlage, jedem Foto und jeder Notiz.
 Frage mich vorher zu den Punkten 1–11 unter „Was noch fehlt oder zu entscheiden ist“, soweit sie Version 4 betreffen
-(E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“, Pro-Logo Verlauf oder Blau). Danach Ideen-Center nachziehen,
+(E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“). Danach Ideen-Center nachziehen,
 im Test-Browser in Handy- und PC-Breite prüfen, Entwurfs-PR anlegen und mir die Datei zeigen.
 ```
