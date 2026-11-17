@@ -4,6 +4,23 @@
 und bleibt nur dort stehen; ab Version 4 überall „Private Akte“, Kürzel im Kopf „PA“. Grund: „Act“ heißt im Englischen
 nicht Akte, „private act“ ist ein Rechtsbegriff, und der Name lag zu nah an „Private Brain Pro“.
 
+## Neues Repo und Rechtstexte (Klaus 17.11.)
+
+- Das Repo **`lausiklauskn-png/Private-Akte`** ist angelegt (bisher nur README), Adresse der Web-App:
+  **https://lausiklauskn-png.github.io/Private-Akte/**. Dort wird gebaut, nicht mehr im Ideen-Center.
+  GitHub Pages muss im Repo noch eingeschaltet werden, falls nicht geschehen.
+- **Von Anfang an dabei, „als würde ich morgen veröffentlichen“:** Impressum, Datenschutzerklärung, Haftungsausschluss,
+  Lizenz und Copyright. Fertiger Entwurf: `entwuerfe/private-akte/rechtliches.html` (eine Seite mit vier Abschnitten,
+  Betreiberangaben wie in der Familienakte, `public/datenschutz.html` dort war die Vorlage).
+  Als `rechtliches.html` ins neue Repo legen, in der App im Fuß und in der Hilfe verlinken, in den Offline-Vorrat aufnehmen.
+- Die Datenschutzerklärung beschreibt **nur den heutigen Stand** (Beispieldaten, nichts gespeichert, kein Netz außer
+  GitHub Pages). **Vor jeder Funktion, die speichert oder nach draußen geht** (Tresor, Sicherung, Helfer/KI, Kalender,
+  Postfach, BookLedgerPro), den passenden Abschnitt ergänzen – Vorlage sind die Abschnitte der Familienakte.
+- **Lizenz: derzeit „Alle Rechte vorbehalten“** (wie die Familienakte, die keine Lizenzdatei hat). Das ist Klaus'
+  Entscheidung und von ihm noch nicht bestätigt. Es passt nicht mehr, sobald das Familienbüro (AGPL-3.0) Teil der App
+  wird – siehe Punkt 9 unten. Im Repo dazu eine Datei `LICENSE` mit demselben Wortlaut anlegen.
+- Kein Anwalt hat die Texte geprüft.
+
 ## Stand
 
 - Im Ideen-Center liegen drei Entwürfe (App-Version 1.1.0, auf `main`, PR #1 zusammengeführt):
@@ -29,7 +46,9 @@ nicht Akte, „private act“ ist ein Rechtsbegriff, und der Name lag zu nah an 
 
 ## Auftrag für die nächste Sitzung: Version 4 „Private Akte“ als Vorschau
 
-Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Version 3 nicht anfassen.
+Version 3 (`entwuerfe/familienakte/version-3/private-act-entwurf-v3.html` im Ideen-Center) als `index.html` ins Repo
+`Private-Akte` übernehmen und dort ändern; dazu Manifest, Icons aus `entwuerfe/logo/`, Service Worker und
+`rechtliches.html`. Version 3 im Ideen-Center nicht anfassen; im Ideen-Center nur einen Verweis auf die neue Adresse ergänzen.
 
 1. **Familienbüro als Stadt** (Repo `lausiklauskn-png/Familienbuero-Pro`: Schreiben, Tabellen, Folien, PDF).
    Es ersetzt die Stadt „Workflow PDF“ und die geplante Stadt „Notizen & Briefe“. Im Familienbüro vier Kacheln wie dort;
@@ -64,7 +83,7 @@ Version 3 kopieren nach `entwuerfe/familienakte/version-4/` und dort ändern. Ve
    - „Kalender“ → Kalender
    Der grüne Knopf „Ablegen“ aus Version 3 geht darin auf oder bleibt als Sammelknopf – in der Vorschau zeigen
    und Klaus entscheiden lassen.
-9. Ideen-Center nachziehen: `ideen.json`, `version.json`, `app.js`, `sw.js` (SHELL), Parameter in `index.html`.
+9. Ideen-Center: in `ideen.json` einen Eintrag mit Verweis auf die neue Adresse; App-Version dort erhöhen.
 
 ## Geprüft: Was noch fehlt oder zu entscheiden ist
 
@@ -113,15 +132,17 @@ Klaus bat um Durchsicht, ob etwas vergessen wurde. Diese Punkte kommen in Versio
 
 ```
 Lies im Repo FP-Idee-Center zuerst BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md.
-Baue Version 4 „Private Akte“ als anklickbare Vorschau auf der Grundlage von Version 3
-(Ordner entwuerfe/familienakte/version-4/, Version 3 bleibt unverändert):
+Baue im Repo lausiklauskn-png/Private-Akte (Adresse https://lausiklauskn-png.github.io/Private-Akte/) die erste
+Fassung der „Privaten Akte“ auf der Grundlage von Version 3 aus dem Ideen-Center:
 1. Familienbüro als Stadt statt „Workflow PDF“ und „Notizen & Briefe“; die PDF-Kachel darin heißt „Workflow PDF“.
 2. Portemonnaie mit Knopf „An BookLedgerPro geben“ und Weg nach außen im Baum.
 3. Leiste oben als Werkzeugleiste: Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF), Dateien hineingeben
    (Datei-Organizer), Notiz, Kalender; dazu Drucken, Landkarte, Farbpalette. Fassung links beim Namen; am Handy nicht überfüllt.
-4. Logo des Ideen-Centers für Kopf, Icon, Favicon und Hintergrund.
+4. Logos aus entwuerfe/logo/ (Basic auf Weiß, Pro mit buntem Rand) für Kopf, Icon, Favicon und Hintergrund.
 5. Notizen von Hand zuordnen; „Bearbeiten mit“ an jeder Unterlage, jedem Foto und jeder Notiz.
-Frage mich vorher zu den Punkten 1–11 unter „Was noch fehlt oder zu entscheiden ist“, soweit sie Version 4 betreffen
-(E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“). Danach Ideen-Center nachziehen,
-im Test-Browser in Handy- und PC-Breite prüfen, Entwurfs-PR anlegen und mir die Datei zeigen.
+6. Von Anfang an: rechtliches.html (Impressum, Datenschutz, Haftungsausschluss, Lizenz & Copyright) aus
+   entwuerfe/private-akte/, verlinkt im Fuß und in der Hilfe, dazu die Datei LICENSE.
+Frage mich vorher zu den offenen Punkten unter „Was noch fehlt oder zu entscheiden ist“, soweit sie diese Fassung
+betreffen (E-Mail, Pseudonymisieren, Leiste am Handy, Knopf „Ablegen“, Lizenz). Prüfe im Test-Browser in Handy- und
+PC-Breite, lege einen Entwurfs-PR an und zeige mir die Datei.
 ```
