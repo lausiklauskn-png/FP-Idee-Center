@@ -6,3 +6,11 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 .ui-icon{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;flex-shrink:0}.draft-open .ui-icon{width:18px;height:18px}.idea-link .ui-icon{width:12px;height:12px}.modal-open-button .ui-icon{width:13px;height:13px;margin-left:4px}@media(max-width:390px){.hero-art{display:none}}
+
+/* Freigegebenes Logo: klare Marke in der Kopfleiste, leises Wasserzeichen in freier Fläche. */
+.brand-logo{width:72px;height:72px}
+.hero-art.logo-watermark{aspect-ratio:1;background-image:url('./assets/fp-ideen-center-logo.png');background-position:center;background-repeat:no-repeat;background-size:contain;opacity:.12;pointer-events:none;user-select:none}
+.logo-download{color:#466b8c;text-decoration:none}.logo-download:hover{text-decoration:underline;color:var(--blue)}
+@media(max-width:900px){.brand-logo{width:60px;height:60px}}
+@media(max-width:680px){.brand-logo{width:58px;height:58px}.hero-art.logo-watermark{opacity:.09}}
+@media(max-width:390px){.hero-art.logo-watermark{display:none}}

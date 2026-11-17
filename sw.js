@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const PREFIX = 'fp-ideen-center-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
@@ -7,6 +7,7 @@ const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'ideen.json', 'version.json',
   'manifest.webmanifest', 'assets/fp-ideen-center-logo.png',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
+  'favicon.ico', 'icons/favicon-16.png', 'icons/favicon-32.png', 'icons/favicon-48.png',
   'vendor/bootstrap.min.css', 'vendor/bootstrap.bundle.min.js',
   'entwuerfe/familienakte/version-1/familienakte-entwurf-v1.html',
   'entwuerfe/familienakte/version-1/familienakte-ideenblatt-v1.html'

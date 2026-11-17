@@ -9,20 +9,22 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>FP Ideen-Center</title>
-  <link rel="icon" href="./icons/icon-192.png" type="image/png">
-  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./favicon.ico?v=1.0.1" sizes="any">
+  <link rel="icon" href="./icons/favicon-32.png?v=1.0.1" type="image/png" sizes="32x32">
+  <link rel="icon" href="./icons/favicon-16.png?v=1.0.1" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=1.0.1" sizes="180x180">
+  <link rel="manifest" href="./manifest.webmanifest?v=1.0.1">
   <link rel="stylesheet" href="./vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <link rel="stylesheet" href="./styles.css?v=1.0.1">
   <script defer src="./vendor/bootstrap.bundle.min.js"></script>
-  <script defer src="./app.js?v=1.0.0"></script>
+  <script defer src="./app.js?v=1.0.1"></script>
 </head>
 <body>
   <a href="#ideen" class="skip-link">Zu den Ideen</a>
   <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="./" aria-label="FP Ideen-Center Startseite">
-        <img src="./assets/fp-ideen-center-logo.png" width="66" height="66" alt="" class="brand-logo">
+        <img src="./assets/fp-ideen-center-logo.png" width="72" height="72" alt="" class="brand-logo">
         <span><strong>FP Ideen-Center</strong><small>Raum für den nächsten Gedanken.</small></span>
       </a>
       <nav class="header-actions" aria-label="App-Aktionen">
@@ -35,7 +37,7 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy"><p class="eyebrow">IDEEN BEKOMMEN GESTALT</p><h1 id="hero-title">Ein Gedanke.<br><span>Viele Möglichkeiten.</span></h1><p class="hero-text">Hier sammeln wir Ideen, schauen uns Entwürfe an<br class="desktop-break"> und entwickeln sie Schritt für Schritt weiter.</p><a href="#ideen" class="hero-link">Entwürfe entdecken <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13m-5-5 5 5 5-5M5 21h14"/></svg></a></div>
-        <div class="hero-art" aria-hidden="true"><div class="art-glow"></div><img src="./assets/fp-ideen-center-logo.png" width="1254" height="1254" alt="" fetchpriority="high"></div>
+        <div class="hero-art logo-watermark" aria-hidden="true"></div>
       </section>
 
       <div class="app-status-row"><span class="connection-label" id="connection-label"><span class="status-dot" aria-hidden="true"></span> Bereit zum Entdecken</span><span class="app-feedback" id="app-feedback" role="status" aria-live="polite"></span></div>
@@ -56,7 +58,7 @@
       </section>
     </main>
 
-    <footer class="site-footer"><span>FP Ideen-Center</span><span id="app-version">App-Version 1.0.0</span><span>Ein Anfang. Offen für mehr.</span></footer>
+    <footer class="site-footer"><span>FP Ideen-Center</span><a class="logo-download" href="./assets/fp-ideen-center-logo-4096px-300dpi.png" download="FP-Ideen-Center-Logo-4096px-300dpi.png">Logo als PNG herunterladen</a><span id="app-version">App-Version 1.0.1</span><span>Ein Anfang. Offen für mehr.</span></footer>
   </div>
 
   <div class="modal fade" id="versions-modal" tabindex="-1" aria-labelledby="versions-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><div><p class="eyebrow">WAS STECKT DRIN?</p><h2 class="modal-title" id="versions-title">Ideen & ihre Versionen</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button></div><div class="modal-body" id="version-content"><h3>Familienakteentwurf Version 1</h3><ul><li>Neue Übersicht und vertraute Aktenbereiche</li><li>Suche, Dokumentvorschau und Ablage</li><li>Module, Geräteansichten und Ideensammlung</li></ul><a class="btn modal-open-button" href="./entwuerfe/familienakte/version-1/familienakte-entwurf-v1.html">Entwurf ansehen <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div><div class="modal-footer"><span id="versions-footer">Entwurfsstände bleiben einzeln aufrufbar.</span></div></div></div></div>
